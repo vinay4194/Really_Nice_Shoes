@@ -1,0 +1,226 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+section {
+  padding: 5em 0;
+}
+
+.container {
+  width: 85%;
+  max-width: 65em;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 1.5rem);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 1.2em;
+  background: var(--clr-accent, #2193b0);
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 3px;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.main-title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 14.1em 0;
+  background-repeat: no-repeat;
+  background: url(images/shoe-3.png), radial-gradient(#444, #111);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.section-title {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 2.2em;
+}
+
+.split {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 5em;
+}
+
+.split > * {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  min-width: 15em;
+}
+
+.featured {
+  background: #eee;
+}
+
+.featured-item {
+  display: block;
+  position: relative;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.featured-item:hover, .featured-item:focus {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.featured-item:hover .featured-details, .featured-item:focus .featured-details {
+  opacity: 1;
+  text-shadow: 0 0 2em white;
+}
+
+.featured-item::after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  z-index: -1;
+  padding: 75% 75% 0 0;
+  border-radius: 50%;
+  background: #2193b0;
+}
+
+.featured-details {
+  opacity: 0;
+  -webkit-transition: opacity 250ms linear;
+  transition: opacity 250ms linear;
+}
+
+.featured-details span {
+  margin-top: .3em;
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.product {
+  padding: 3em;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+  background: radial-gradient(var(--clr-inner, yellow), var(--clr-outer, orange));
+}
+
+.product-title {
+  font-size: clamp(3rem, calc(5vw+1rem), 5.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.product-img {
+  margin: -5em 0 0 0;
+}
+
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    margin-bottom: 9em;
+  }
+  .product-title {
+    margin: 0;
+  }
+  .product-img {
+    float: right;
+    width: 65%;
+    shape-outside: url(images/shoe-1.png);
+    shape-margin: 1em;
+    margin: 0 -7em 0 0;
+  }
+  .product.shoe-white .product-img {
+    float: left;
+    shape-outside: url(images/shoe-2.png);
+    shape-margin: 2em;
+    margin: 0 0 0 -7em;
+  }
+}
+
+@media (min-width: 45em) {
+  .hero {
+    padding: 16em 0;
+  }
+  .main-title {
+    font-size: 4rem;
+  }
+}
+
+.shoe-red {
+  --clr-inner:#f5ab18;
+  --clr-outer:#f1ae41;
+  --clr-accent:#cf832c;
+}
+
+.shoe-white {
+  --clr-inner:#fce4b3;
+  --clr-outer:#eac886;
+  --clr-accent:#b1ab57;
+}
+
+.shoe-blue {
+  --clr-inner:#6dd5ed;
+  --clr-outer:#2193b0;
+  --clr-accent:#18a082;
+}
+/*# sourceMappingURL=style.css.map */
